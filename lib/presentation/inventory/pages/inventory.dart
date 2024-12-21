@@ -197,16 +197,14 @@
 //   }
 // }
 
-
-
 import 'package:flutter/material.dart';
 import 'package:pos_flutter/common/navigation/app_navigation.dart';
 import 'package:pos_flutter/common/widgets/sidebar_screen.dart';
+import 'package:pos_flutter/presentation/inventory/widgets/addProduct.dart';
 import 'package:pos_flutter/presentation/inventory/widgets/editProduct.dart';
 import 'package:pos_flutter/presentation/inventory/widgets/showProductDetail.dart';
 import 'package:pos_flutter/presentation/inventory/widgets/products.dart';
 import 'package:pos_flutter/common/dummyData/dummyData.dart';
-import 'package:pos_flutter/presentation/inventory/widgets/addProduct.dart';
 
 class InventoryScreen extends StatefulWidget {
   const InventoryScreen({super.key});
@@ -311,6 +309,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          // Navigator.push(context, const AddProduct(onAdd: onAdd));
           AppNavigator.push(
             context,
             AddProduct(

@@ -3,7 +3,7 @@ import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class Showproductdetail extends StatelessWidget {
   final Map<String, dynamic> dummyData;
-  const Showproductdetail({super.key, required this.dummyData});
+  const Showproductdetail({super.key, required this.dummyData,});
 
   @override
   Widget build(BuildContext context) {
