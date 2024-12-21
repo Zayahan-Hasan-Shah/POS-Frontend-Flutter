@@ -2,7 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class HeroCard extends StatelessWidget {
-  const HeroCard({super.key});
+  final String username;
+  final String shopAddress;
+  final String shopName;
+
+  const HeroCard({
+    super.key,
+    required this.username,
+    required this.shopAddress,
+    required this.shopName,
+  });
+
+  // const HeroCard({
+  //   super.key,
+  //   required String username,
+  //   required String shopName,
+  //   required String shopAddress,
+  // });
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +31,12 @@ class HeroCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.primaryCardColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(top: 8, left: 16, bottom: 16,),
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 8,
+            left: 16,
+            bottom: 16,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,15 +45,15 @@ class HeroCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'General Store',
-                    style: TextStyle(
+                    shopName,
+                    style: const TextStyle(
                       fontSize: 24,
                       color: AppPallete.textColor,
                     ),
                   ),
                   Text(
-                    'Zayahan',
-                    style: TextStyle(
+                    username,
+                    style: const TextStyle(
                       fontSize: 20,
                       color: AppPallete.textColor,
                     ),
@@ -41,8 +61,8 @@ class HeroCard extends StatelessWidget {
                 ],
               ),
               Text(
-                'C-64, ABC Road, Karachi',
-                style: TextStyle(
+                shopAddress,
+                style: const TextStyle(
                   fontSize: 16,
                   color: AppPallete.textColor,
                 ),

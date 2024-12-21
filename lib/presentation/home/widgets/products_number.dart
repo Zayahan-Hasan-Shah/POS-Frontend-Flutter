@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class ProductsNumber extends StatelessWidget {
-  const ProductsNumber({super.key});
+  const ProductsNumber({super.key, required int totalProducts});
 
   @override
   Widget build(BuildContext context) {

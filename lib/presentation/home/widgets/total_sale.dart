@@ -3,7 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class SaleProducts extends StatelessWidget {
-  const SaleProducts({super.key});
+  final double totalSales;
+
+  const SaleProducts({super.key, required this.totalSales});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,8 @@ class SaleProducts extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.salesColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(
+        child: Padding(
+          padding: const EdgeInsets.only(
             top: 8,
             left: 16,
             bottom: 16,
@@ -27,7 +29,7 @@ class SaleProducts extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     FontAwesomeIcons.rupeeSign,
@@ -47,8 +49,8 @@ class SaleProducts extends StatelessWidget {
                 ],
               ),
               Text(
-                '63',
-                style: TextStyle(
+                totalSales.toString(),
+                style: const TextStyle(
                   fontSize: 20,
                   color: AppPallete.textColor,
                 ),

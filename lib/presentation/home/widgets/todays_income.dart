@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class TodaysIncome extends StatelessWidget {
-  const TodaysIncome({super.key});
+  final double todaysIncome;
+
+  const TodaysIncome({super.key, required this.todaysIncome});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,8 @@ class TodaysIncome extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.secondaryCardColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(
+        child: Padding(
+          padding: const EdgeInsets.only(
             top: 8,
             left: 16,
             bottom: 16,
@@ -26,7 +28,7 @@ class TodaysIncome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.show_chart,
@@ -45,8 +47,8 @@ class TodaysIncome extends StatelessWidget {
                 ],
               ),
               Text(
-                'Rs.45000/-',
-                style: TextStyle(
+                'Rs.${todaysIncome}/-',
+                style: const TextStyle(
                   fontSize: 20,
                   color: AppPallete.textColor,
                 ),

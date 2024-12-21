@@ -1,11 +1,4 @@
-// class Home{
-//   final String name; // username
-//   final String shopName;
-//   final String shopAddress;
-
-// }
-
-// class HomeModel {
+// class HomeEntity {
 //   final String username;
 //   final String shopName;
 //   final String shopAddress;
@@ -18,7 +11,7 @@
 //   final int productSolds;
 //   final int netProfit;
 
-//   HomeModel({
+//   HomeEntity({
 //     required this.username,
 //     required this.shopName,
 //     required this.shopAddress,
@@ -33,10 +26,11 @@
 //   });
 // }
 
+// lib/domain/home/entities/home_entity.dart
 
-// lib/data/home/models/home_model.dart
+import 'package:equatable/equatable.dart';
 
-class HomeModel {
+class HomeEntity extends Equatable {
   final String username;
   final String shopName;
   final String shopAddress;
@@ -48,7 +42,7 @@ class HomeModel {
   final int totalProductsSold;
   final double netProfit;
 
-  HomeModel({
+  HomeEntity({
     required this.username,
     required this.shopName,
     required this.shopAddress,
@@ -61,33 +55,17 @@ class HomeModel {
     required this.netProfit,
   });
 
-  factory HomeModel.fromJson(Map<String, dynamic> json) {
-    return HomeModel(
-      username: json['username'],
-      shopName: json['shopName'],
-      shopAddress: json['shopAddress'],
-      totalCategories: json['totalCategories'],
-      totalProducts: json['totalProducts'],
-      todaysIncome: json['todaysIncome'],
-      monthlyIncome: json['monthlyIncome'],
-      totalSales: json['totalSales'],
-      totalProductsSold: json['totalProductsSold'],
-      netProfit: json['netProfit'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'username': username,
-      'shopName': shopName,
-      'shopAddress': shopAddress,
-      'totalCategories': totalCategories,
-      'totalProducts': totalProducts,
-      'todaysIncome': todaysIncome,
-      'monthlyIncome': monthlyIncome,
-      'totalSales': totalSales,
-      'totalProductsSold': totalProductsSold,
-      'netProfit': netProfit,
-    };
-  }
+  @override
+  List<Object> get props => [
+        username,
+        shopName,
+        shopAddress,
+        totalCategories,
+        totalProducts,
+        todaysIncome,
+        monthlyIncome,
+        totalSales,
+        totalProductsSold,
+        netProfit,
+      ];
 }

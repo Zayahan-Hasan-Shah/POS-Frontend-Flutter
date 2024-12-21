@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class ProductSolds extends StatelessWidget {
-  const ProductSolds({super.key});
+  final int totalProductsSold;
+
+  const ProductSolds({super.key, required this.totalProductsSold});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,8 @@ class ProductSolds extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.salesColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(
+        child: Padding(
+          padding: const EdgeInsets.only(
             top: 8,
             left: 16,
             bottom: 16,
@@ -26,7 +28,7 @@ class ProductSolds extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.inventory_2_outlined,
@@ -46,8 +48,8 @@ class ProductSolds extends StatelessWidget {
                 ],
               ),
               Text(
-                '63',
-                style: TextStyle(
+                totalProductsSold.toString(),
+                style: const TextStyle(
                   fontSize: 20,
                   color: AppPallete.textColor,
                 ),

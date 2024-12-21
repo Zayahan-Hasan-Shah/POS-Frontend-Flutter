@@ -3,7 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class NetProfit extends StatelessWidget {
-  const NetProfit({super.key});
+
+  final double netProfit;
+
+  const NetProfit({super.key, required this.netProfit});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +19,8 @@ class NetProfit extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.salesColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(
+        child: Padding(
+          padding: const EdgeInsets.only(
             top: 8,
             left: 16,
             bottom: 16,
@@ -27,7 +30,7 @@ class NetProfit extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     FontAwesomeIcons.chartLine,
@@ -47,8 +50,8 @@ class NetProfit extends StatelessWidget {
                 ],
               ),
               Text(
-                'Rs.73000/-',
-                style: TextStyle(
+                'Rs.$netProfit/-',
+                style: const TextStyle(
                   fontSize: 20,
                   color: AppPallete.textColor,
                 ),

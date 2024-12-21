@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class CategoryNumber extends StatelessWidget {
-  const CategoryNumber({super.key});
+  const CategoryNumber({super.key, required int totalCategories});
 
   @override
   Widget build(BuildContext context) {

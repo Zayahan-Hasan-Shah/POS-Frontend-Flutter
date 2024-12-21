@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pos_flutter/core/theme/app_pallete.dart';
 
 class MonthlyIncome extends StatelessWidget {
-  const MonthlyIncome({super.key});
+  final double monthlyIncome;
+
+  const MonthlyIncome({super.key, required this.monthlyIncome});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,8 @@ class MonthlyIncome extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: AppPallete.secondaryCardColor,
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(
+        child: Padding(
+          padding: const EdgeInsets.only(
             top: 8,
             left: 16,
             bottom: 16,
@@ -26,7 +28,7 @@ class MonthlyIncome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.show_chart,
@@ -45,8 +47,8 @@ class MonthlyIncome extends StatelessWidget {
                 ],
               ),
               Text(
-                'Rs.135000/-',
-                style: TextStyle(
+                'Rs.${monthlyIncome}/-',
+                style: const TextStyle(
                   fontSize: 20,
                   color: AppPallete.textColor,
                 ),
