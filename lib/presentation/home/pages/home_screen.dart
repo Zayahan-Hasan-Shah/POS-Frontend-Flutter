@@ -311,9 +311,9 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Username: ${homeEntity.username}'),
-                      Text('Shop Name: ${homeEntity.shopName}'),
-                      Text('Shop Address: ${homeEntity.shopAddress}'),
+                      // Text('Username: ${homeEntity.username}'),
+                      // Text('Shop Name: ${homeEntity.shopName}'),
+                      // Text('Shop Address: ${homeEntity.shopAddress}'),
                       HeroCard(username: homeEntity.username, shopName: homeEntity.shopName, shopAddress: homeEntity.shopAddress),
                       SizedBox(height: 10),
                       InventoryText(),

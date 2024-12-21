@@ -62,5 +62,5 @@ void setupServiceLocator() {
   // signup
   sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl());
   // login
-  sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl());
+  // sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl());
 }
