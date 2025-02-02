@@ -17,6 +17,7 @@ import 'package:pos_flutter/domain/auth/usecases/login.dart';
 import 'package:pos_flutter/domain/auth/usecases/signup.dart';
 import 'package:pos_flutter/presentation/auth/loginbloc/login_bloc.dart';
 import 'package:pos_flutter/presentation/auth/signupbloc/signup_bloc.dart';
+import 'package:pos_flutter/presentation/inventory/bloc/inventory_bloc.dart';
 
 final sl = GetIt.instance;
 
@@ -64,4 +65,17 @@ void setupServiceLocator() {
   sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl());
   // login
   // sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl());
+
+
+  // Inventory 
+  // sl.registerFactory(() => InventoryBloc());
+  
+
+
+
+
+  // Supplier Layer
+  // sl.registerLazySingleton(() => SupplierApiService(sl()));
+  // sl.registerLazySingleton<SupplierRepository>(() => SupplierRepositoryImpl(sl()));
+  // sl.registerLazySingleton(() => AddSupplierUsecase(sl()));
 }

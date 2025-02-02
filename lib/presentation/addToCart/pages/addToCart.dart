@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pos_flutter/common/customerDummyData/customerDummyData.dart';
+import 'package:pos_flutter/common/widgets/sidebar_screen.dart';
 import 'package:pos_flutter/presentation/customerManagement/pages/addCustomer.dart';
 import 'package:pos_flutter/presentation/invoice/pages/invoice.dart';
 import 'package:pos_flutter/common/dummyData/dummyData.dart';
@@ -83,6 +84,7 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SidebarScreen(),
       appBar: AppBar(
         title: const Text('Add to Cart'),
       ),
